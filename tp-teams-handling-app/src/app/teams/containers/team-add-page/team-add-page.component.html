@@ -1,0 +1,36 @@
+<section class="add-form-container">
+  <form [formGroup]="addTeamForm" class="add-form-container" (ngSubmit)="createTeam()" novalidate>
+
+    <mat-form-field color="primary" appearance="outline" class="team-field">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" placeholder="Placeholder">
+      <mat-error *ngIf="addTeamForm.get('name')!.invalid">
+        Name is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field color="primary" appearance="outline" class="team-field">
+      <mat-label>Slogan</mat-label>
+      <input matInput formControlName="slogan" placeholder="Placeholder">
+      <mat-error *ngIf="addTeamForm.get('slogan')!.invalid">
+        Slogan is required
+      </mat-error>
+    </mat-form-field>
+
+    <div>
+      <button mat-raised-button
+              class="cancel-button"
+              (click)="cancel()">
+        Cancel
+      </button>
+
+      <button type="submit"
+              mat-raised-button
+              color="primary">
+        Create
+      </button>
+    </div>
+
+  </form>
+
+</section>

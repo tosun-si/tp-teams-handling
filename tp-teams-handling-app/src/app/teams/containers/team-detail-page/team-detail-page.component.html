@@ -1,0 +1,13 @@
+<div class="team-detail-box">
+  <tha-team-detail [team]="team$ | async">
+  </tha-team-detail>
+
+  <div>
+    <button mat-raised-button
+            class="back-button"
+            color="primary"
+            (click)="redirectToTeamList()">
+      Back
+    </button>
+  </div>
+</div>

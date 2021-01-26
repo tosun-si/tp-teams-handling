@@ -1,0 +1,17 @@
+<mat-card class="team-card-box" *ngFor='let team of teams' (click)="onSelectTeam(team)">
+  <mat-card-content>
+    {{team.name}}
+
+    <mat-icon
+      svgIcon="note-remove"
+      matTooltip="Remove the team"
+      (click)="onDeleteTeam(team)">
+    </mat-icon>
+
+    <mat-icon
+      svgIcon="file-edit"
+      matTooltip="Go to update team page"
+      (click)="onUpdateTeam(team)">
+    </mat-icon>
+  </mat-card-content>
+</mat-card>

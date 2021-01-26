@@ -1,0 +1,14 @@
+<div class="team-list-box">
+  <tha-team-list [teams]="teams$ | async"
+                 (deleteTeam)="deleteTeam($event)"
+                 (selectTeam)="redirectToTeamDetail($event)"
+                 (updateTeam)="redirectToTeamEdit($event)">
+  </tha-team-list>
+
+  <mat-icon
+    svgIcon="note-plus"
+    matTooltip="Add a new team"
+    (click)="redirectToTeamAdd()">
+  </mat-icon>
+</div>
+
